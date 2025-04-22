@@ -1,12 +1,93 @@
-# React + Vite
+# MoodMate - Interactive Mood Journal with Weather Integration
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MoodMate is a responsive web application that allows users to track their daily moods alongside weather data. This project demonstrates front-end development skills with React, including API integration, data visualization, and responsive design.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 📱 Responsive design for mobile and desktop
+- 😊 Daily mood tracking with 5 different mood options
+- 🌤️ Real-time weather integration using geolocation
+- 📝 Note-taking for daily journal entries
+- 📊 Visualization of mood trends over time
+- 🌙 Dark mode support
+- 📅 Calendar view for past entries
+- 🔍 Filter entries by mood
+- 📤 Export entries as CSV or PDF
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React 18
+- Tailwind CSS for styling
+- Chart.js for data visualization
+- Axios for API requests
+- jsPDF for PDF exports
+- Local Storage for data persistence
+
+## Installation
+
+1. Clone the repository
+   ```
+   git clone https://github.com/yourusername/moodmate.git
+   cd moodmate
+   ```
+
+2. Install dependencies
+   ```
+   npm install
+   ```
+
+3. Add your OpenWeatherMap API key
+   - Sign up at [OpenWeatherMap](https://openweathermap.org/api) to get an API key
+   - In `App.jsx`, replace `YOUR_OPENWEATHERMAP_API_KEY` with your actual API key
+
+4. Start the development server
+   ```
+   npm run dev
+   ```
+
+5. Build for production
+   ```
+   npm run build
+   ```
+
+## Usage
+
+- Select your mood from the emoji options
+- Add a note about your day
+- Save your entry to store it with current weather data
+- View past entries in the Journal tab
+- See mood trends and insights in the Trends tab
+- Export your journal as CSV or PDF
+
+## Deployment
+
+This app can be deployed to:
+- GitHub Pages
+- Netlify
+- Vercel
+- Any static site hosting service
+
+## Project Structure
+
+```
+moodmate/
+├── public/              # Static files
+├── src/
+│   ├── components/      # React components
+│   │   ├── DailyView.jsx
+│   │   ├── Header.jsx
+│   │   ├── NotesView.jsx
+│   │   ├── Notification.jsx
+│   │   └── TrendsView.jsx
+│   ├── hooks/           # Custom React hooks
+│   │   └── useLocalStorage.js
+│   ├── App.jsx          # Main application component
+│   ├── index.css        # Global styles
+│   └── main.jsx         # Entry point
+├── index.html           # HTML template
+└── package.json         # Dependencies and scripts
+```
+
+## License
+
+MIT
